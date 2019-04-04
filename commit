@@ -1,0 +1,8 @@
+#!/bin/bash
+# Bash Script to commit to git at a user defined date 
+# USAGE: commit days filename
+
+dt=$(date -d $1'day')
+git add $2
+git commit --date="$dt" -m "$2" -m "Updates"
+echo $dt 
